@@ -1,0 +1,5 @@
+C:\A W2022 Courses\COMP 210 - Winter 2022\TheBasics\Painting\bin\x86\Debug\Painting.exe
+C:\A W2022 Courses\COMP 210 - Winter 2022\TheBasics\Painting\bin\x86\Debug\Program1.idy
+C:\A W2022 Courses\COMP 210 - Winter 2022\TheBasics\Painting\obj\x86\Debug\Painting.exe
+C:\A W2022 Courses\COMP 210 - Winter 2022\TheBasics\Painting\obj\x86\Debug\Program1.idy
+C:\A W2022 Courses\COMP 210 - Winter 2022\TheBasics\Painting\obj\x86\Debug\Program1.obj

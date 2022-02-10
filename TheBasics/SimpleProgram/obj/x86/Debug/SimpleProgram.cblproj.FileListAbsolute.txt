@@ -1,0 +1,5 @@
+C:\GitRepos\semester-4\cpa-cobol\TheBasics\SimpleProgram\bin\x86\Debug\SimpleProgram.exe
+C:\GitRepos\semester-4\cpa-cobol\TheBasics\SimpleProgram\bin\x86\Debug\Program1.idy
+C:\GitRepos\semester-4\cpa-cobol\TheBasics\SimpleProgram\obj\x86\Debug\SimpleProgram.exe
+C:\GitRepos\semester-4\cpa-cobol\TheBasics\SimpleProgram\obj\x86\Debug\Program1.idy
+C:\GitRepos\semester-4\cpa-cobol\TheBasics\SimpleProgram\obj\x86\Debug\Program1.obj

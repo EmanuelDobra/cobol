@@ -1,0 +1,5 @@
+C:\GitRepos\semester-4\cpa-cobol\Painting\Painting\Program1\bin\x86\Debug\Program1.exe
+C:\GitRepos\semester-4\cpa-cobol\Painting\Painting\Program1\bin\x86\Debug\Program1.idy
+C:\GitRepos\semester-4\cpa-cobol\Painting\Painting\Program1\obj\x86\Debug\Program1.exe
+C:\GitRepos\semester-4\cpa-cobol\Painting\Painting\Program1\obj\x86\Debug\Program1.idy
+C:\GitRepos\semester-4\cpa-cobol\Painting\Painting\Program1\obj\x86\Debug\Program1.obj
