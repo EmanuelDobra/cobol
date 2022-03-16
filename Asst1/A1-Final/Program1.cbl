@@ -1,0 +1,215 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. PAINTING.
+       AUTHOR.     EMANUEL DOBRA.
+
+       ENVIRONMENT DIVISION.
+       INPUT-OUTPUT SECTION.
+       FILE-CONTROL.
+           SELECT F01-GRADES-FILE ASSIGN TO 'CodingAsst.dat'
+                                   ORGANIZATION IS LINE SEQUENTIAL.
+           SELECT F02-PRINT-FILE   ASSIGN TO 'UniReport.dat'
+                                   ORGANIZATION IS LINE SEQUENTIAL.
+
+       DATA DIVISION.
+       FILE SECTION.
+
+      *Input file definition. 
+       FD  F01-GRADES-FILE
+           RECORD CONTAINS 53 CHARACTERS
+           DATA RECORD IS F01-GRADES-RECORD.
+
+       01 F01-GRADES-RECORD.
+         05 F01-STUDENT-ID     PIC 9(5).
+         05 F01-COURSE-1       PIC X(7).
+         05 F01-GRADE-1        PIC X.
+         05 F01-COURSE-2       PIC X(7).
+         05 F01-GRADE-2        PIC X.
+         05 F01-COURSE-3       PIC X(7).
+         05 F01-GRADE-3        PIC X.
+         05 F01-COURSE-4       PIC X(7).
+         05 F01-GRADE-4        PIC X.
+         05 F01-COURSE-5       PIC X(7).
+         05 F01-GRADE-5        PIC X.
+         05 F01-COURSE-6       PIC X(7).
+         05 F01-GRADE-6        PIC X.
+
+      *Output file definition.
+       FD  F02-PRINT-FILE
+           RECORD CONTAINS 59 CHARACTERS
+           DATA RECORD IS F02-PRINT-LINE-RECORD.
+       01 F02-PRINT-LINE-RECORD PIC X(59).
+
+       WORKING-STORAGE SECTION.
+       01 W01-DATA-REMAINS-SWITCH PIC X(2) VALUE SPACES.
+
+       01 W02-HEADING-LINE-ONE.
+         05 PIC X(19)  VALUE SPACES.
+         05 PIC X(40)  VALUE 'UNIVERSITY OF NOWHERE BY EMANUEL DOBRA'.
+
+       01 W03-HEADING-LINE-TWO.
+         05 PIC X(20)  VALUE SPACES.
+         05 PIC X(39)  VALUE 'STUDENT CURRICULUM EVALUATION'.
+
+       01 W04-HEADING-LINE-THREE.
+         05 PIC X(10)  VALUE 'STUDENT ID'.
+         05 PIC X(20)  VALUE SPACES.
+         05 PIC X(29)  VALUE 'PERCENTAGE OF COURSES'.
+
+       01 W05-HEADING-LINE-FOUR.
+         05 PIC X(2)   VALUE SPACES.
+         05 PIC X(6)   VALUE 'NUMBER'.
+         05 PIC X(4)   VALUE SPACES.
+         05 PIC X(9)   VALUE 'COMPLETED'.
+         05 PIC X(3)   VALUE SPACES.
+         05 PIC X(9)   VALUE 'REMAINING'.
+         05 PIC X(3)   VALUE SPACES.
+         05 PIC X(23)  VALUE 'TRANSFERRED PROFICIENCY'.
+
+       01 W06-DETAIL-LINE.
+         05                        PIC X(2) VALUE SPACES.
+         05 W06-PRINT-STUDENT-ID   PIC X(5).
+         05                        PIC X(8) VALUE SPACES.
+         05 W06-PRINT-COMPLETED    PIC 999.
+         05                        PIC X(9) VALUE SPACES.
+         05 W06-PRINT-REMAINING    PIC 999.
+         05                        PIC X(10) VALUE SPACES.
+         05 W06-PRINT-TRANSFERRED  PIC 999.
+         05                        PIC X(9) VALUE SPACES.
+         05 W06-PRINT-PROFICIENCY  PIC 999.
+         05                        PIC X(4) VALUE SPACES.
+
+      *Holds temporary variables while looping through courses/grades.
+       01 W07-TEMP.
+         05 W07-COURSE-CODE    PIC X(7).
+         05 W07-GRADE          PIC X.
+
+      *Holds counters of each course status type.
+       01 W08-COUNTERS.
+         05 W08-COMPLETED      PIC 9 VALUE 0.
+         05 W08-REMAINING      PIC 9 VALUE 0.
+         05 W08-TRANSFERRED    PIC 9 VALUE 0.
+         05 W08-PROFICIENCY    PIC 9 VALUE 0.
+         05 W08-ENROLLED       PIC 9 VALUE 0.
+
+      *Holds final percentages of each course status type.
+       01 W09-PERCENTAGE-OUTPUTS.
+         05 W09-COMPLETED-OUT      PIC 999.
+         05 W09-REMAINING-OUT      PIC 999.
+         05 W09-TRANSFERRED-OUT    PIC 999.
+         05 W09-PROFICIENCY-OUT    PIC 999.
+
+       PROCEDURE DIVISION.
+           PERFORM 100-OPEN-FILES
+           READ F01-GRADES-FILE
+               AT END
+                   MOVE 'NO' TO W01-DATA-REMAINS-SWITCH
+           END-READ
+           PERFORM 200-PRINT-HEADINGS
+           PERFORM 300-PROCESS-RECORDS
+             UNTIL W01-DATA-REMAINS-SWITCH = 'NO'
+           PERFORM 400-CLOSE-FILES
+           STOP RUN.
+
+       100-OPEN-FILES.
+           OPEN INPUT F01-GRADES-FILE
+           OPEN OUTPUT F02-PRINT-FILE
+           .
+
+       200-PRINT-HEADINGS.
+           MOVE W02-HEADING-LINE-ONE TO F02-PRINT-LINE-RECORD
+           WRITE F02-PRINT-LINE-RECORD
+           MOVE W03-HEADING-LINE-TWO TO F02-PRINT-LINE-RECORD
+           WRITE F02-PRINT-LINE-RECORD
+           MOVE SPACES TO F02-PRINT-LINE-RECORD
+           WRITE F02-PRINT-LINE-RECORD
+           MOVE W04-HEADING-LINE-THREE TO F02-PRINT-LINE-RECORD
+           WRITE F02-PRINT-LINE-RECORD
+           MOVE W05-HEADING-LINE-FOUR TO F02-PRINT-LINE-RECORD
+           WRITE F02-PRINT-LINE-RECORD
+           MOVE SPACES TO F02-PRINT-LINE-RECORD
+           WRITE F02-PRINT-LINE-RECORD
+           .
+
+       300-PROCESS-RECORDS.
+           PERFORM 310-CHECK-ALL-GRADES
+           PERFORM 320-CALCULATE-PERCENTAGES
+           MOVE F01-STUDENT-ID TO W06-PRINT-STUDENT-ID
+           MOVE W09-COMPLETED-OUT TO W06-PRINT-COMPLETED
+           MOVE W09-REMAINING-OUT TO W06-PRINT-REMAINING
+           MOVE W09-TRANSFERRED-OUT TO W06-PRINT-TRANSFERRED
+           MOVE W09-PROFICIENCY-OUT TO W06-PRINT-PROFICIENCY
+           MOVE W06-DETAIL-LINE TO F02-PRINT-LINE-RECORD
+           WRITE F02-PRINT-LINE-RECORD
+           PERFORM 330-CLEAR-TOTALS
+           READ F01-GRADES-FILE
+               AT END
+                   MOVE 'NO' TO W01-DATA-REMAINS-SWITCH
+           END-READ
+           .
+
+       310-CHECK-ALL-GRADES.
+           MOVE F01-COURSE-1 TO W07-COURSE-CODE
+           MOVE F01-GRADE-1 TO W07-GRADE
+           PERFORM 312-CHECK-ONE-GRADE
+           MOVE F01-COURSE-2 TO W07-COURSE-CODE
+           MOVE F01-GRADE-2 TO W07-GRADE
+           PERFORM 312-CHECK-ONE-GRADE
+           MOVE F01-COURSE-3 TO W07-COURSE-CODE
+           MOVE F01-GRADE-3 TO W07-GRADE
+           PERFORM 312-CHECK-ONE-GRADE
+           MOVE F01-COURSE-4 TO W07-COURSE-CODE
+           MOVE F01-GRADE-4 TO W07-GRADE
+           PERFORM 312-CHECK-ONE-GRADE
+           MOVE F01-COURSE-5 TO W07-COURSE-CODE
+           MOVE F01-GRADE-5 TO W07-GRADE
+           PERFORM 312-CHECK-ONE-GRADE
+           MOVE F01-COURSE-6 TO W07-COURSE-CODE
+           MOVE F01-GRADE-6 TO W07-GRADE
+           PERFORM 312-CHECK-ONE-GRADE
+           .
+            
+
+       312-CHECK-ONE-GRADE.
+           EVALUATE W07-GRADE
+               WHEN = 'A' OR 'B' OR 'C' OR 'D'
+                   ADD 1 TO W08-COMPLETED
+               WHEN = 'P'
+                   ADD 1 TO W08-PROFICIENCY
+                   ADD 1 TO W08-COMPLETED
+               WHEN = 'K'
+                   ADD 1 TO W08-TRANSFERRED
+                   ADD 1 TO W08-COMPLETED
+               WHEN NOT = ('A' OR 'B' OR 'C' OR 'D' OR 'K' OR 'P')
+                   IF W07-COURSE-CODE NOT = ''
+                       ADD 1 TO W08-REMAINING
+                   END-IF
+           END-EVALUATE
+           .
+
+
+       320-CALCULATE-PERCENTAGES.
+           ADD W08-COMPLETED TO W08-REMAINING GIVING
+             W08-ENROLLED ROUNDED
+           COMPUTE W09-COMPLETED-OUT ROUNDED =
+             ((W08-COMPLETED / W08-ENROLLED) * 100)
+           COMPUTE W09-REMAINING-OUT ROUNDED =
+             ((W08-REMAINING / W08-ENROLLED) * 100)
+           COMPUTE W09-TRANSFERRED-OUT ROUNDED = 
+             ((W08-TRANSFERRED / W08-ENROLLED) * 100)
+           COMPUTE W09-PROFICIENCY-OUT ROUNDED = 
+             ((W08-PROFICIENCY / W08-ENROLLED) * 100)
+           .
+
+       330-CLEAR-TOTALS.
+           MOVE 0 TO W08-COMPLETED
+           MOVE 0 TO W08-PROFICIENCY
+           MOVE 0 TO W08-REMAINING
+           MOVE 0 TO W08-TRANSFERRED
+           MOVE 0 TO W08-ENROLLED
+           .
+
+
+       400-CLOSE-FILES.
+           CLOSE F01-GRADES-FILE
+                 F02-PRINT-FILE
+           .

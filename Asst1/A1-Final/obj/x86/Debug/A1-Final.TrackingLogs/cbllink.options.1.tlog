@@ -1,0 +1,2 @@
+^C:\GITREPOS\SEMESTER-4\CPA-COBOL\ASST1\A1-FINAL\OBJ\X86\DEBUG\PROGRAM1.OBJ
+MFCBT_Options=-Oobj\x86\Debug\A1_Final.exe -N -FM obj\x86\Debug\Program1.obj . MFCBT_Objs=

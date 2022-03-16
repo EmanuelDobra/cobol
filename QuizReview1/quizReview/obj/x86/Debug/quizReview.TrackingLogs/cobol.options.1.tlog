@@ -1,0 +1,4 @@
+^C:\GITREPOS\SEMESTER-4\CPA-COBOL\QUIZREVIEW1\QUIZREVIEW\PAINTING\PAINTING.CBL
+MFCBT_Directives=int"C:obj\x86\Debug\Painting.int" anim cobidy"obj\x86\Debug\" sourcetabstop"4" noquery warnings"1" max-error"100" obj"C:obj\x86\Debug\Painting.obj" delint xtraint . MFCBT_CopyPaths=
+^C:\GITREPOS\SEMESTER-4\CPA-COBOL\QUIZREVIEW1\QUIZREVIEW\PROGRAM1.CBL
+MFCBT_Directives=int"C:obj\x86\Debug\Program1.int" anim cobidy"obj\x86\Debug\" sourcetabstop"4" noquery warnings"1" max-error"100" obj"C:obj\x86\Debug\Program1.obj" delint xtraint . MFCBT_CopyPaths=

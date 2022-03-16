@@ -1,0 +1,9 @@
+C:\GitRepos\semester-4\cpa-cobol\QuizReview1\quizReview\obj\x86\Debug\Program1.idy
+C:\GitRepos\semester-4\cpa-cobol\QuizReview1\quizReview\obj\x86\Debug\Program1.obj
+C:\GitRepos\semester-4\cpa-cobol\QuizReview1\quizReview\obj\x86\Debug\Program2.obj
+C:\GitRepos\semester-4\cpa-cobol\QuizReview1\quizReview\bin\x86\Debug\quizReview.exe
+C:\GitRepos\semester-4\cpa-cobol\QuizReview1\quizReview\bin\x86\Debug\Program1.idy
+C:\GitRepos\semester-4\cpa-cobol\QuizReview1\quizReview\obj\x86\Debug\quizReview.exe
+C:\GitRepos\semester-4\cpa-cobol\QuizReview1\quizReview\bin\x86\Debug\Painting.idy
+C:\GitRepos\semester-4\cpa-cobol\QuizReview1\quizReview\obj\x86\Debug\Painting.idy
+C:\GitRepos\semester-4\cpa-cobol\QuizReview1\quizReview\obj\x86\Debug\Painting.obj

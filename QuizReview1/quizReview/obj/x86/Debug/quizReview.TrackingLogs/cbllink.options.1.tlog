@@ -1,0 +1,4 @@
+^C:\GITREPOS\SEMESTER-4\CPA-COBOL\QUIZREVIEW1\QUIZREVIEW\OBJ\X86\DEBUG\PAINTING.OBJ
+MFCBT_Options=-Oobj\x86\Debug\quizReview.exe -N -FM obj\x86\Debug\Painting.obj . MFCBT_Objs=obj\x86\Debug\Program1.obj 
+^C:\GITREPOS\SEMESTER-4\CPA-COBOL\QUIZREVIEW1\QUIZREVIEW\OBJ\X86\DEBUG\PROGRAM1.OBJ
+MFCBT_Options=-Oobj\x86\Debug\quizReview.exe -N -FM obj\x86\Debug\Program1.obj . MFCBT_Objs=

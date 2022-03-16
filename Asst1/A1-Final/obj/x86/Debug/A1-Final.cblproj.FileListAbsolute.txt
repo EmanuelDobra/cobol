@@ -1,0 +1,5 @@
+C:\GitRepos\semester-4\cpa-cobol\Asst1\A1-Final\bin\x86\Debug\A1_Final.exe
+C:\GitRepos\semester-4\cpa-cobol\Asst1\A1-Final\bin\x86\Debug\Program1.idy
+C:\GitRepos\semester-4\cpa-cobol\Asst1\A1-Final\obj\x86\Debug\A1_Final.exe
+C:\GitRepos\semester-4\cpa-cobol\Asst1\A1-Final\obj\x86\Debug\Program1.idy
+C:\GitRepos\semester-4\cpa-cobol\Asst1\A1-Final\obj\x86\Debug\Program1.obj
