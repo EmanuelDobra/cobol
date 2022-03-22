@@ -1,0 +1,8 @@
+{
+  "Profiles": {
+    "ValidateCarSales": {
+      "commandName": "Project",
+      "otherSettings": {}
+    }
+  }
+}

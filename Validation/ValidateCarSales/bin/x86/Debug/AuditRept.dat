@@ -1,0 +1,48 @@
+                                              VERY VERY NICE CARS INC.
+                                                 VALIDATION REPORT
+
+                            CAR      CAR          CAR        ASKING     PRICE  ERROR MESSAGE
+   INVOICE #  SALESPERSON  YEAR     MAKER        MODEL        PRICE      SOLD
+
+              WILLCOX       92   NISSAN       PATHFINDER
+              SCHULZ        9O   ACURA        LEGEND COUPE
+              MORIN         93   CHEVROLET    CORVETTE ZR1
+              TORRES        92   BMW          535I
+              WENDEL        93                ESPRIT
+              FIXLER        88   FERRARI      TESTAROSSA
+              JONES         91   NISSAN       300ZX
+              MORIN         93   RANGEROVER   4 DOOR
+              CULVER        93   MERCEDES     560SEC
+              TORRES        93   CADDILLAC    FLEETWOOD
+              WILLCOX       88   ROLLS ROYCE  CORNICHE
+              FIXLER        84   FERRARI      308GTB
+              CULVER        93   JAGUAR       XJS CONV
+              WENDEL        91   ALFA ROMEO   SPYDER
+              SCHULZ        93   LEXUS        LS400
+              JONES         90   PORSCHE      911 CABRIOLET
+              WILLCOX       94   TOYOTA       SELECA
+              SCHULZ        96   ACURA        SEDAN
+              MORIN         93   CHEVROLET    CAMERO
+                            95   BMW          R600
+              WENDEL        96   TOYOTA
+              FIXLER        95   FORD         MUSTANG
+              JONES         93   NISSAN       300ZX
+              MORIN         93   TOYOTA       LANDCRUISER
+              CULVER        96   CHRYSLER     PT CRUISER
+              TORRES        97   CADDILLAC    DEVILLE
+              WILLCOX       95   CHRYSLER     RAM1500
+              FIXLER        94   FORD         TEMPO
+              CULVER        93   LINCOLN      CONTINENTAL
+              WENDEL        97   NISSAN       MAXIMA
+              SCHULZ        05   TOYOTA       TACOMA
+              JONES         94   PORSCHE      BOXTER
+              JONES         99   NISSAN       ALTIMA
+              MORIN         98   FORD         F150
+              CULVER        98   MAZDA        MIATA
+              TORRES        99   CADDILLAC    FLEETWOOD
+              WILLCOX       96   CHRYSLER     NEON
+              FIXLER        98   FORD         FOCUS
+              CULVER        97   MAZDA        B3000
+              WENDEL        99   KIA          RIO
+              SCHULZ        95   HONDA        CIVIC
+              JONES         95   PONTIAC      SUNFIRE

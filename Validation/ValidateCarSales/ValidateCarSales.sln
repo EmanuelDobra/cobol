@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30523.141
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{535C04D7-A2A5-47C7-83E0-B340A995CD1F}") = "ValidateCarSales", "ValidateCarSales.cblproj", "{8D3F84DB-7312-4697-89F8-D2893252C79E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D3F84DB-7312-4697-89F8-D2893252C79E}.Debug|x86.ActiveCfg = Debug|x86
+		{8D3F84DB-7312-4697-89F8-D2893252C79E}.Debug|x86.Build.0 = Debug|x86
+		{8D3F84DB-7312-4697-89F8-D2893252C79E}.Release|x86.ActiveCfg = Release|x86
+		{8D3F84DB-7312-4697-89F8-D2893252C79E}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8DA8E38B-8888-41DE-A9D7-7F02A6B24BAC}
+	EndGlobalSection
+EndGlobal

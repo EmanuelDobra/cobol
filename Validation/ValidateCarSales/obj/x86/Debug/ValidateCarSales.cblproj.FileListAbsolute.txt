@@ -1,0 +1,5 @@
+C:\GitRepos\semester-4\cpa-cobol\Validation\ValidateCarSales\bin\x86\Debug\ValidateCarSales.exe
+C:\GitRepos\semester-4\cpa-cobol\Validation\ValidateCarSales\bin\x86\Debug\Program1.idy
+C:\GitRepos\semester-4\cpa-cobol\Validation\ValidateCarSales\obj\x86\Debug\ValidateCarSales.exe
+C:\GitRepos\semester-4\cpa-cobol\Validation\ValidateCarSales\obj\x86\Debug\Program1.idy
+C:\GitRepos\semester-4\cpa-cobol\Validation\ValidateCarSales\obj\x86\Debug\Program1.obj
